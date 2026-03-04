@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Репетитор по математике в Москве — подготовка к ЕГЭ и ОГЭ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #f8faf9;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #2e7d32, #1b5e20);
+            color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.4rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.15rem;
+            margin-bottom: 32px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-call {
+            display: inline-block;
+            background: #fff;
+            color: #2e7d32;
+            padding: 14px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .btn-call:hover {
+            background: #e8f5e9;
+            transform: translateY(-2px);
+        }
+
+        .btn-call::before {
+            content: "📞 ";
+        }
+
+        /* Sections */
+        .section {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            color: #2e7d32;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.05rem;
+        }
+
+        /* About */
+        .about {
+            background: #fff;
+        }
+
+        .about-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.05rem;
+            color: #555;
+        }
+
+        .about-avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2e7d32, #66bb6a);
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+        }
+
+        .about-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2e7d32;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e8f5e9;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .service-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        .service-card p {
+            color: #888;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .service-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2e7d32;
+        }
+
+        .service-duration {
+            font-size: 0.85rem;
+            color: #999;
+            margin-top: 4px;
+        }
+
+        /* Advantages */
+        .advantages {
+            background: #fff;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+        }
+
+        .advantage-item {
+            text-align: center;
+            padding: 24px 16px;
+        }
+
+        .advantage-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: #e8f5e9;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+
+        .advantage-item h3 {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        .advantage-item p {
+            color: #777;
+            font-size: 0.93rem;
+        }
+
+        /* Reviews */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .review-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 28px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid #e8f5e9;
+        }
+
+        .review-stars {
+            color: #f5a623;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+
+        .review-text {
+            font-size: 0.97rem;
+            color: #555;
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+
+        .review-author {
+            font-weight: 600;
+            color: #333;
+            font-size: 0.95rem;
+        }
+
+        .review-result {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        /* Contacts */
+        .contacts {
+            background: #fff;
+        }
+
+        .contacts-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .contacts-info {
+            font-size: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            gap: 12px;
+        }
+
+        .contact-item-icon {
+            font-size: 1.4rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .contact-item strong {
+            display: block;
+            margin-bottom: 2px;
+            color: #222;
+        }
+
+        .contact-item span {
+            color: #666;
+        }
+
+        .form {
+            background: #f8faf9;
+            border-radius: 12px;
+            padding: 32px 28px;
+            border: 1px solid #e8f5e9;
+        }
+
+        .form-title {
+            font-size: 1.15rem;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+            background: #fff;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #2e7d32;
+            box-shadow: 0 0 0 3px rgba(46,125,50,0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background: #2e7d32;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn-submit:hover {
+            background: #1b5e20;
+            transform: translateY(-1px);
+        }
+
+        .btn-submit:active {
+            transform: translateY(0);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a2e1a;
+            color: #a8c5a8;
+            text-align: center;
+            padding: 28px 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .header {
+                padding: 50px 16px;
+            }
+
+            .header h1 {
+                font-size: 1.7rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .section {
+                padding: 40px 16px;
+            }
+
+            .section-title {
+                font-size: 1.45rem;
+            }
+
+            .contacts-wrapper {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .form {
+                padding: 24px 20px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-stats {
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .advantages-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .about-stats {
+                gap: 16px;
+            }
+
+            .stat-number {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Репетитор по математике в Москве</h1>
+        <p>Подготовка к ЕГЭ и ОГЭ, помощь школьникам 5–11 классов. Очно и онлайн. Первое занятие — бесплатно!</p>
+        <a href="tel:+79991234567" class="btn-call">Записаться</a>
+    </header>
+
+    <!-- About -->
+    <section class="about">
+        <div class="section">
+            <h2 class="section-title">Обо мне</h2>
+            <div class="section-subtitle">Познакомимся поближе</div>
+            <div class="about-avatar">👩‍🏫</div>
+            <div class="about-content">
+                <p>Меня зовут Елена Сергеевна. Я — профессиональный репетитор по математике с 12-летним опытом преподавания. Окончила мехмат МГУ с красным дипломом. Работала учителем в лицее, сейчас полностью занимаюсь частной практикой. Мои ученики стабильно сдают ЕГЭ на 80+ баллов, многие поступают в топовые вузы страны. Умею объяснять сложное простым языком и нахожу подход к каждому ребёнку.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <div class="stat-number">12 лет</div>
+                    <div class="stat-label">опыт преподавания</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">учеников</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">94</div>
+                    <div class="stat-label">средний балл ЕГЭ</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">стобалльников</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section>
+        <div class="section">
+            <h2 class="section-title">Услуги и цены</h2>
+            <div class="section-subtitle">Выберите подходящий формат занятий</div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎓</div>
+                    <h3>Подготовка к ЕГЭ</h3>
+                    <p>Интенсивный курс для 10–11 классов с разбором всех типов заданий</p>
+                    <div class="service-price">2 500 ₽</div>
+                    <div class="service-duration">90 минут</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📝</div>
+                    <h3>Подготовка к ОГЭ</h3>
+                    <p>Системная подготовка для 9 класса, устранение пробелов</p>
+                    <div class="service-price">2 000 ₽</div>
+                    <div class="service-duration">90 минут</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📚</div>
+                    <h3>Школьная программа</h3>
+                    <p>Помощь с домашними заданиями и повышение успеваемости</p>
+                    <div class="service-price">1 800 ₽</div>
+                    <div class="service-duration">60 минут</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Онлайн-занятия</h3>
+                    <p>Удобный формат через Zoom или Skype из любой точки мира</p>
+                    <div class="service-price">1 500 ₽</div>
+                    <div class="service-duration">60 минут</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages -->
+    <section class="advantages">
+        <div class="section">
+            <h2 class="section-title">Почему выбирают меня</h2>
+            <div class="section-subtitle">Мой подход к обучению</div>
+            <div class="advantages-grid">
+                <div class="advantage-item">
+                    <div class="advantage-icon">🎯</div>
+                    <h3>Индивидуальный подход</h3>
+                    <p>Программа составляется под уровень и цели конкретного ученика</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">📊</div>
+                    <h3>Отслеживание прогресса</h3>
+                    <p>Регулярные тесты и отчёты для родителей о достижениях</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">📱</div>
+                    <h3>Поддержка 24/7</h3>
+                    <p>Отвечаю на вопросы в мессенджерах между занятиями</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">🏠</div>
+                    <h3>Выезд на дом</h3>
+                    <p>Провожу занятия у вас дома или в удобном месте</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">📖</div>
+                    <h3>Бесплатные материалы</h3>
+                    <p>Предоставляю все необходимые пособия и задачники</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">🎁</div>
+                    <h3>Пробный урок бесплатно</h3>
+                    <p>Первое занятие — знакомство и диагностика без оплаты</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section>
+        <div class="section">
+            <h2 class="section-title">Отзывы учеников и родителей</h2>
+            <div class="section-subtitle">Реальные истории успеха</div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">«Сын занимался с Еленой Сергеевной весь 11 класс. Пришёл с тройкой по математике, а на ЕГЭ набрал 92 балла! Поступил в ВШЭ на бюджет. Огромное спасибо!»</p>
+                    <div class="review-author">Марина, мама Артёма</div>
+                    <span class="review-result">ЕГЭ: 92 балла</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">«Готовилась к ОГЭ за 4 месяца. Елена Сергеевна объясняет так понятно, что даже геометрия стала любимым предметом! Сдала на пятёрку, чего совсем не ожидала.»</p>
+                    <div class="review-author">Алиса, 9 класс</div>
+                    <span class="review-result">ОГЭ: отлично</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">«Занимаемся онлайн из Сочи. Дочь подтянула алгебру и теперь уверенно решает контрольные. Удобный формат, никаких технических проблем. Рекомендуем!»</p>
+                    <div class="review-author">Ольга, мама Софии</div>
+                    <span class="review-result">Оценка: 5</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts -->
+    <section class="contacts">
+        <div class="section">
+            <h2 class="section-title">Записаться на занятие</h2>
+            <div class="section-subtitle">Оставьте заявку, и я свяжусь с вами в течение часа</div>
+            <div class="contacts-wrapper">
+                <div class="contacts-info">
+                    <div class="contact-item">
+                        <span class="contact-item-icon">📞</span>
+                        <div>
+                            <strong>Телефон</strong>
+                            <span><a href="tel:+79991234567">+7 (999) 123-45-67</a></span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-item-icon">💬</span>
+                        <div>
+                            <strong>WhatsApp / Telegram</strong>
+                            <span>+7 (999) 123-45-67</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-item-icon">✉️</span>
+                        <div>
+                            <strong>Email</strong>
+                            <span>elena.tutor@mail.ru</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-item-icon">📍</span>
+                        <div>
+                            <strong>Район</strong>
+                            <span>Выезд: ЦАО, ЮАО, ЮЗАО<br>Онлайн: без ограничений</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-item-icon">🕐</span>
+                        <div>
+                            <strong>Время занятий</strong>
+                            <span>Пн–Сб: 10:00 – 21:00<br>Вс: по договорённости</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="form" action="#" method="post" onsubmit="return handleSubmit(event)">
+                    <div class="form-title">Запись на бесплатный пробный урок</div>
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" name="name" placeholder="Как вас зовут?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="grade">Класс ученика</label>
+                        <select id="grade" name="grade">
+                            <option value="">Выберите класс</option>
+                            <option value="5">5 класс</option>
+                            <option value="6">6 класс</option>
+                            <option value="7">7 класс</option>
+                            <option value="8">8 класс</option>
+                            <option value="9">9 класс (ОГЭ)</option>
+                            <option value="10">10 класс</option>
+                            <option value="11">11 класс (ЕГЭ)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Комментарий</label>
+                        <textarea id="comment" name="comment" placeholder="Цель занятий, текущий уровень, пожелания..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Записаться на пробный урок</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Репетитор по математике — Елена Сергеевна. Москва.</p>
+    </footer>
+
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            var btn = e.target.querySelector('.btn-submit');
+            btn.textContent = '✓ Заявка отправлена!';
+            btn.style.background = '#1b5e20';
+            setTimeout(function() {
+                btn.textContent = 'Записаться на пробный урок';
+                btn.style.background = '';
+                e.target.reset();
+            }, 3000);
+            return false;
+        }
+    </script>
+
+</body>
+</html>
